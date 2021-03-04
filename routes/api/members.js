@@ -45,9 +45,25 @@ router.put("/:id", (req, res) => {
 
     members.forEach((member) => {
       if (member.id === parseInt(req.params.id)) {
-        member.name = req.body.name;
-        member.email = req.body.email;
+        member.name = updMember.name ? updMember.name : member.name;
+        member.email = updMember.email ? updMember.email : member.email;
       }
+    });
+  } else {
+    res.status(400).json({ msg: "Member not found!" });
+  }
+});
+
+// Delete Member
+router.put("/:id", (req, res) => {
+  const found = members.some((member) => member.id === parseInt(req.params.id));
+
+  if (found) {
+    res.json({
+      msg: "Member deleted!",
+      members: members.filter(
+        (member) => member.id !== uuid.parseInt(req.params.id)
+      ),
     });
   } else {
     res.status(400).json({ msg: "Member not found!" });
