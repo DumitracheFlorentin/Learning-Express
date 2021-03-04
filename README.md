@@ -2,14 +2,14 @@
 
 ## What is Express?
 
-Express is a fast minimalist web framework for Node.js.
+- Express is a fast minimalist web framework for Node.js.
 
 ## Why use Express?
 
-Used for both server rendered apps as well as API/ Microservices
-Extremely light, fast and free
-The most popular Node.js framework
-Great to use with client side frameworks as it is all Javascript
+- Used for both server rendered apps as well as API/ Microservices
+- Extremely light, fast and free
+- The most popular Node.js framework
+- Great to use with client side frameworks as it is all Javascript
 
 ## Basic Server Syntax
 
